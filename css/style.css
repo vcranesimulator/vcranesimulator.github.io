@@ -1,0 +1,262 @@
+/*////////////////////////////////////////////*/
+/*///////////// F O N T S ////////////////////*/
+/*////////////////////////////////////////////*/
+
+/*+++++++++ B I G   J O H N +++++++++++*/
+
+@font-face{
+    font-family: 'big john';
+    src: url(../fonts/BIG\ JOHN.otf);
+    font-weight: 700;
+}
+
+/*+++++++++ L O U I S   G E O R G E   C A F E +++++++++++*/
+
+@font-face{
+    font-family: 'louis george cafe';
+    src: url(../fonts/text/Louis\ George\ Cafe.ttf);
+    font-weight: 400;
+}
+@font-face{
+    font-family: 'louis george cafe';
+    src: url(../fonts/text/Louis\ George\ Cafe\ Bold.ttf);
+    font-weight: 700;
+}
+@font-face{
+    font-family: 'louis george cafe';
+    src: url(../fonts/text/Louis\ George\ Cafe\ Light.ttf);
+    font-weight: 300;
+}
+@font-face{
+    font-family: 'louis george cafe';
+    src: url(../fonts/text/Louis\ George\ Cafe\ Italic.ttf);
+    font-weight: 400;
+    font-style: italic;
+}
+@font-face{
+    font-family: 'louis george cafe';
+    src: url(../fonts/text/Louis\ George\ Cafe\ Bold\ Italic.ttf);
+    font-weight: 700;
+    font-style: italic;
+}
+@font-face{
+    font-family: 'louis george cafe';
+    src: url(../fonts/text/Louis\ George\ Cafe\ Light\ Italic.ttf);
+    font-weight: 300;
+    font-style: italic;
+}
+
+/*////////////////////////////////////////////*/
+/*/////////// V A R I A B L E S //////////////*/
+/*////////////////////////////////////////////*/
+
+:root{
+    --font-title: 'big john';
+    --font-text: 'louis george cafe';
+
+    --black-transparent: rgba(28, 28, 28, 0.3);
+    --black-contact: rgba(28, 28, 28, 0.98);
+    --black-profile-hover: rgba(28, 28, 28, 0.8);
+    --black-profile: #3f3f3f;
+    --gray-color: #8a8a8a;
+    --white-background: #e9e9e9;
+
+    --black-color: #1c1c1c;
+    --yellow-color: rgb(255, 192, 0);
+    --white-color: #d6d6d6;
+}
+
+/*////////////////////////////////////////////*/
+/*///////////// S T Y L E //////////////////*/
+/*////////////////////////////////////////////*/
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    margin: 0;
+    background-color: var(--yellow-color);
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    overflow-x: hidden;
+}
+
+.wrapper{
+    width: 100vw;
+    /*height: 100vh;*/
+    position: relative;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+/*////////////////////////////////////////////*/
+/*////////////// I N D E X ///////////////////*/
+/*////////////////////////////////////////////*/
+
+
+/*++++++++++++++++++++++++++++++++++++++++++++*/
+/*++++++++++++++ N A V B A R +++++++++++++++++*/
+/*++++++++++++++++++++++++++++++++++++++++++++*/
+
+.navbar{
+    width: 100%;
+    height: 12vh;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    background: transparent;
+    /*background-color: var(--black-color);*/
+    transition: 0.5s;
+}
+.navbar-top{
+    background: linear-gradient(180deg, rgba(28, 28, 28, 0.5) 60%, rgba(28, 28, 28, 0));
+}
+.navbar-scroll{
+    height: 8vh;
+    background-color: var(--black-color);
+}
+.navbar-scroll #navbar-logo-img{
+    margin-left: 100px;
+}
+/*.navbar-scroll .navbar-logo{
+    display: none;
+}*/
+
+.navbar-logo{
+    width: 65%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+#navbar-logo-img{
+    height: 70%;
+    margin-left: 50px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.navbar-menu{
+    width: 30%;
+    height: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+}
+.navbar-menu a{
+    text-align: center;
+    text-decoration: none;
+    font-family: var(--font-text);
+    font-size: 0.8em;
+    font-weight: 700;
+    color: var(--yellow-color);
+    opacity: 0.6;
+    padding: 10px;
+    cursor: pointer;
+    transition: opacity 0.5s;
+}
+.navbar-menu a:hover{
+    opacity: 1;
+}
+/*.navbar-scroll a{
+    color: var(--white-color);
+}*/
+
+/*++++++++++++++++++++++++++++++++++++++++++++*/
+/*++++++++++++++ H E A D E R +++++++++++++++++*/
+/*++++++++++++++++++++++++++++++++++++++++++++*/
+
+.index-header{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+.index-header img{
+    width: 100%;
+    filter: grayscale(1) brightness(0.4);
+}
+
+.header-text{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+.header-text h1{
+    font-family: var(--font-title);
+    font-size: 2.8em;
+    color: var(--yellow-color);
+}
+.header-text p{
+    width: 40%;
+    margin-top: 2%;
+    font-family: var(--font-text);
+    font-size: 1.5em;
+    color: var(--white-color);
+    text-align: justify;
+}
+
+/*++++++++++++++++++++++++++++++++++++++++++++*/
+/*++++++++++++++ H A P T I C O +++++++++++++++++*/
+/*++++++++++++++++++++++++++++++++++++++++++++*/
+
+.haptico-wrapper{
+    width: 100%;
+    height: 100vh;
+    background-image: url(../images/index/VCRANE_pattern.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.haptico-unfinished{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.haptico-warning{
+    width: 30%;
+    padding: 10px;
+    background-color: var(--yellow-color);
+}
+.haptico-warning h1{
+    font-family: var(--font-text);
+    font-size: 3em;
+    font-weight: 700;
+    letter-spacing: 5px;
+    color: var(--yellow-color);
+    background-color: var(--black-color);
+    padding: 10px;
+    text-align: center;
+}
+.haptico-warning p{
+    width: 80%;
+    margin: 0 auto;
+    font-family: var(--font-text);
+    font-size: 2.5em;
+    font-weight: 700;
+    font-variant: small-caps;
+    color: var(--black-color);
+    padding: 10px;
+    text-align: center;
+}
